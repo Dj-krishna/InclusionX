@@ -91,7 +91,7 @@ const Contact = () => {
                     <div className="space-y-8">
                         <div className="glass rounded-3xl p-8">
                             <h3 className="text-2xl font-bold mb-6 gradient-text">Let's Build Something Amazing</h3>
-                            <p className="text-gray-400 mb-8 leading-relaxed">
+                            <p className="text-gray-600 dark:text-gray-400 mb-8 leading-relaxed">
                                 Whether you have a project in mind or just want to chat about possibilities,
                                 we're here to help. Fill out the form or reach out directly through any of our channels.
                             </p>
@@ -105,8 +105,8 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <div className="text-sm text-gray-400 mb-1">Email Us</div>
-                                        <a href="mailto:info@inclusionx.com" className="text-white hover:text-cyan-400 transition-colors">
+                                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Email Us</div>
+                                        <a href="mailto:info@inclusionx.com" className="text-gray-900 dark:text-white hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors">
                                             info@inclusionx.com
                                         </a>
                                     </div>
@@ -120,8 +120,8 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <div className="text-sm text-gray-400 mb-1">Call Us</div>
-                                        <a href="tel:+1234567890" className="text-white hover:text-purple-400 transition-colors">
+                                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Call Us</div>
+                                        <a href="tel:+1234567890" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
                                             +1 (234) 567-890
                                         </a>
                                     </div>
@@ -136,8 +136,8 @@ const Contact = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <div className="text-sm text-gray-400 mb-1">Visit Us</div>
-                                        <div className="text-white">
+                                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Visit Us</div>
+                                        <div className="text-gray-900 dark:text-white">
                                             123 Tech Street, Digital City<br />
                                             Innovation Hub, 12345
                                         </div>
@@ -147,7 +147,7 @@ const Contact = () => {
 
                             {/* Social Links */}
                             <div className="mt-8 pt-8 border-t border-white/10">
-                                <div className="text-sm text-gray-400 mb-4">Follow Us</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400 mb-4">Follow Us</div>
                                 <div className="flex gap-4">
                                     {['twitter', 'linkedin', 'github', 'instagram'].map((social) => (
                                         <a
@@ -174,13 +174,13 @@ const Contact = () => {
                                     </svg>
                                 </div>
                                 <h3 className="text-2xl font-bold mb-2 gradient-text">Thank You!</h3>
-                                <p className="text-gray-400">We've received your message and will get back to you shortly.</p>
+                                <p className="text-gray-600 dark:text-gray-400">We've received your message and will get back to you shortly.</p>
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 {/* Name Input */}
                                 <div>
-                                    <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                         Your Name *
                                     </label>
                                     <input
@@ -189,16 +189,16 @@ const Contact = () => {
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className={`w-full px-4 py-3 bg-white/5 border ${errors.name ? 'border-red-500' : 'border-white/10'
-                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-white`}
+                                        className={`w-full px-4 py-3 bg-white dark:bg-white/5 border ${errors.name ? 'border-red-500' : 'border-gray-300 dark:border-white/10'
+                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-gray-900 dark:text-white`}
                                         placeholder="John Doe"
                                     />
-                                    {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
+                                    {errors.name && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.name}</p>}
                                 </div>
 
                                 {/* Email Input */}
                                 <div>
-                                    <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                         Email Address *
                                     </label>
                                     <input
@@ -207,16 +207,16 @@ const Contact = () => {
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className={`w-full px-4 py-3 bg-white/5 border ${errors.email ? 'border-red-500' : 'border-white/10'
-                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-white`}
+                                        className={`w-full px-4 py-3 bg-white dark:bg-white/5 border ${errors.email ? 'border-red-500' : 'border-gray-300 dark:border-white/10'
+                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-gray-900 dark:text-white`}
                                         placeholder="john@example.com"
                                     />
-                                    {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
+                                    {errors.email && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.email}</p>}
                                 </div>
 
                                 {/* Service Selection */}
                                 <div>
-                                    <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
+                                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                         Service Interested In *
                                     </label>
                                     <select
@@ -224,21 +224,21 @@ const Contact = () => {
                                         name="service"
                                         value={formData.service}
                                         onChange={handleChange}
-                                        className={`w-full px-4 py-3 bg-white/5 border ${errors.service ? 'border-red-500' : 'border-white/10'
-                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-white`}
+                                        className={`w-full px-4 py-3 bg-white dark:bg-white/5 border ${errors.service ? 'border-red-500' : 'border-gray-300 dark:border-white/10'
+                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-gray-900 dark:text-white`}
                                     >
-                                        <option value="" className="bg-gray-900">Select a service</option>
-                                        <option value="tech-development" className="bg-gray-900">Tech Development</option>
-                                        <option value="digital-marketing" className="bg-gray-900">Digital Marketing</option>
-                                        <option value="both" className="bg-gray-900">Both Services</option>
-                                        <option value="consultation" className="bg-gray-900">General Consultation</option>
+                                        <option value="" className="bg-white dark:bg-gray-900">Select a service</option>
+                                        <option value="tech-development" className="bg-white dark:bg-gray-900">Tech Development</option>
+                                        <option value="digital-marketing" className="bg-white dark:bg-gray-900">Digital Marketing</option>
+                                        <option value="both" className="bg-white dark:bg-gray-900">Both Services</option>
+                                        <option value="consultation" className="bg-white dark:bg-gray-900">General Consultation</option>
                                     </select>
-                                    {errors.service && <p className="mt-1 text-sm text-red-400">{errors.service}</p>}
+                                    {errors.service && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.service}</p>}
                                 </div>
 
                                 {/* Message Input */}
                                 <div>
-                                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                                         Your Message *
                                     </label>
                                     <textarea
@@ -247,11 +247,11 @@ const Contact = () => {
                                         value={formData.message}
                                         onChange={handleChange}
                                         rows="5"
-                                        className={`w-full px-4 py-3 bg-white/5 border ${errors.message ? 'border-red-500' : 'border-white/10'
-                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-white resize-none`}
+                                        className={`w-full px-4 py-3 bg-white dark:bg-white/5 border ${errors.message ? 'border-red-500' : 'border-gray-300 dark:border-white/10'
+                                            } rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-gray-900 dark:text-white resize-none`}
                                         placeholder="Tell us about your project..."
                                     ></textarea>
-                                    {errors.message && <p className="mt-1 text-sm text-red-400">{errors.message}</p>}
+                                    {errors.message && <p className="mt-1 text-sm text-red-600 dark:text-red-400">{errors.message}</p>}
                                 </div>
 
                                 {/* Submit Button */}

@@ -21,7 +21,7 @@ const Footer = () => {
     };
 
     return (
-        <footer className="relative bg-gray-950 border-t border-white/10">
+        <footer className="relative border-t border-white/10 bg-white dark:bg-gray-950 transition-colors duration-300">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
                 {/* Main Footer Content */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -31,7 +31,7 @@ const Footer = () => {
                             <span className="text-3xl">✦</span>
                             InclusionX
                         </a>
-                        <p className="text-gray-400 mb-6 leading-relaxed">
+                        <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                             Transforming businesses through innovative technology and strategic digital solutions.
                         </p>
                         {/* Social Links */}
@@ -56,13 +56,13 @@ const Footer = () => {
 
                     {/* Company Links */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-white">Company</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Company</h3>
                         <ul className="space-y-3">
                             {footerLinks.company.map((link) => (
                                 <li key={link.name}>
                                     <a
                                         href={link.href}
-                                        className="text-gray-400 hover:text-cyan-400 transition-colors duration-300"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-colors duration-300"
                                         onClick={(e) => {
                                             e.preventDefault();
                                             const element = document.querySelector(link.href);
@@ -80,13 +80,13 @@ const Footer = () => {
 
                     {/* Services Links */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-white">Services</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Services</h3>
                         <ul className="space-y-3">
                             {footerLinks.services.map((link) => (
                                 <li key={link.name}>
                                     <a
                                         href={link.href}
-                                        className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                                        className="text-gray-600 dark:text-gray-400 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300"
                                         onClick={(e) => {
                                             e.preventDefault();
                                             const element = document.querySelector(link.href);
@@ -104,15 +104,15 @@ const Footer = () => {
 
                     {/* Newsletter */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4 text-white">Stay Updated</h3>
-                        <p className="text-gray-400 text-sm mb-4">
+                        <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Stay Updated</h3>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                             Subscribe to our newsletter for the latest updates and insights.
                         </p>
                         <div className="flex gap-2">
                             <input
                                 type="email"
                                 placeholder="Your email"
-                                className="flex-1 px-4 py-2 bg-white/5 border border-white/10 rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-white text-sm"
+                                className="flex-1 px-4 py-2 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg focus:outline-none focus:border-cyan-500 transition-colors text-gray-900 dark:text-white text-sm"
                             />
                             <button
                                 className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 font-semibold text-sm"
@@ -124,10 +124,10 @@ const Footer = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-white/10">
+                <div className="pt-8 border-t border-gray-300 dark:border-white/10">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         {/* Copyright */}
-                        <div className="text-gray-400 text-sm">
+                        <div className="text-gray-600 dark:text-gray-400 text-sm">
                             © {currentYear} InclusionX. All rights reserved.
                         </div>
 
@@ -137,7 +137,7 @@ const Footer = () => {
                                 <a
                                     key={link.name}
                                     href={link.href}
-                                    className="text-gray-400 hover:text-white transition-colors duration-300 text-sm"
+                                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-300 text-sm"
                                 >
                                     {link.name}
                                 </a>

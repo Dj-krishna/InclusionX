@@ -72,12 +72,12 @@ const Features = () => {
                             </div>
 
                             {/* Title */}
-                            <h3 className="text-xl font-bold mb-3 text-white">
+                            <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
                                 {feature.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-gray-400 text-sm leading-relaxed">
+                            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                                 {feature.description}
                             </p>
 
@@ -95,7 +95,7 @@ const Features = () => {
                                 <h3 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
                                     Trusted by Industry Leaders
                                 </h3>
-                                <p className="text-gray-400 leading-relaxed mb-6">
+                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
                                     Our proven track record speaks for itself. We've helped businesses
                                     across various industries achieve their digital transformation goals
                                     with innovative solutions and exceptional service.
@@ -103,11 +103,11 @@ const Features = () => {
                                 <div className="flex gap-4">
                                     <div className="flex-1 glass rounded-xl p-4 text-center">
                                         <div className="text-2xl font-bold gradient-text">99%</div>
-                                        <div className="text-xs text-gray-400 mt-1">Client Satisfaction</div>
+                                        <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Client Satisfaction</div>
                                     </div>
                                     <div className="flex-1 glass rounded-xl p-4 text-center">
                                         <div className="text-2xl font-bold gradient-text">24/7</div>
-                                        <div className="text-xs text-gray-400 mt-1">Support Available</div>
+                                        <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Support Available</div>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@ const Features = () => {
                                 ].map((stat, idx) => (
                                     <div key={idx} className="glass rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
                                         <div className="text-3xl font-bold gradient-text mb-2">{stat.value}</div>
-                                        <div className="text-sm text-gray-400">{stat.label}</div>
+                                        <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
                                     </div>
                                 ))}
                             </div>

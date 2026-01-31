@@ -12,22 +12,41 @@
   }
   
   body {
-    @apply bg-gray-950 text-white font-sans antialiased;
+    @apply text-gray-900 font-sans antialiased;
+    @apply dark:bg-gray-950 dark:text-white;
+    @apply bg-white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Dark mode background gradient */
+  body.dark {
     background-image: 
       radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.05) 0px, transparent 50%),
       radial-gradient(at 97% 21%, hsla(270, 91%, 65%, 0.05) 0px, transparent 50%),
       radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 0.05) 0px, transparent 50%),
       radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.05) 0px, transparent 50%);
   }
+
+  /* Light mode background gradient */
+  body:not(.dark) {
+    background-image: 
+      radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 97% 21%, hsla(270, 91%, 65%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 52% 99%, hsla(354, 98%, 61%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.08) 0px, transparent 50%);
+  }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/5 backdrop-blur-xl border border-white/10;
+    @apply bg-white/5 backdrop-blur-xl border border-gray-300 dark:border-white/10;
+    @apply dark:bg-white/5;
+    @apply bg-white/60 dark:bg-white/5;
   }
   
   .glass-hover {
-    @apply transition-all duration-300 hover:bg-white/10 hover:border-white/20;
+    @apply transition-all duration-300 hover:bg-white/10 hover:border-gray-400 dark:hover:border-white/20;
+    @apply dark:hover:bg-white/10;
   }
   
   .gradient-text {
@@ -39,7 +58,9 @@
   }
   
   .btn-secondary {
-    @apply px-8 py-3 rounded-full font-semibold text-white glass glass-hover transition-all duration-300;
+    @apply px-8 py-3 rounded-full font-semibold transition-all duration-300;
+    @apply dark:text-white dark:glass dark:glass-hover;
+    @apply text-gray-900 bg-gray-200 hover:bg-gray-300;
   }
   
   .section-title {
@@ -47,7 +68,9 @@
   }
   
   .section-subtitle {
-    @apply text-lg md:text-xl text-gray-400 max-w-2xl mx-auto;
+    @apply text-lg md:text-xl max-w-2xl mx-auto;
+    @apply dark:text-gray-400;
+    @apply text-gray-600;
   }
 }
 
@@ -57,7 +80,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  @apply dark:bg-gray-900 bg-gray-100;
 }
 
 ::-webkit-scrollbar-thumb {

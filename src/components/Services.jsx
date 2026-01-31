@@ -77,19 +77,19 @@ const Services = () => {
                             <div className="text-6xl mb-6 animate-float">{service.icon}</div>
 
                             {/* Title */}
-                            <h3 className="text-3xl font-bold mb-4 text-white group-hover:gradient-text transition-all duration-300">
+                            <h3 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white group-hover:gradient-text transition-all duration-300">
                                 {service.title}
                             </h3>
 
                             {/* Description */}
-                            <p className="text-gray-400 mb-6 leading-relaxed">
+                            <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                                 {service.description}
                             </p>
 
                             {/* Features List */}
                             <ul className="space-y-3">
                                 {service.features.map((feature, idx) => (
-                                    <li key={idx} className="flex items-center gap-3 text-gray-300">
+                                    <li key={idx} className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
                                         <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${service.gradient}`}></div>
                                         <span>{feature}</span>
                                     </li>
@@ -108,7 +108,7 @@ const Services = () => {
                         <h3 className="text-2xl font-bold mb-4 gradient-text">
                             ✨ Why Choose Our Services?
                         </h3>
-                        <p className="text-gray-400 leading-relaxed">
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                             We combine technical excellence with creative innovation to deliver solutions
                             that not only meet but exceed expectations. Our team of experts works closely
                             with you to understand your unique challenges and craft strategies that drive real results.

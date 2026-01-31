@@ -44,9 +44,9 @@ const Hero = () => {
                     </h1>
 
                     {/* Subheading */}
-                    <p className="text-xl md:text-2xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
-                        We deliver cutting-edge <span className="text-cyan-400 font-semibold">tech development</span> and
-                        <span className="text-purple-400 font-semibold"> marketing solutions</span> that drive growth and innovation for your business.
+                    <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+                        We deliver cutting-edge <span className="text-cyan-600 dark:text-cyan-400 font-semibold">tech development</span> and
+                        <span className="text-purple-600 dark:text-purple-400 font-semibold"> marketing solutions</span> that drive growth and innovation for your business.
                     </p>
 
                     {/* CTA Buttons */}
@@ -76,15 +76,15 @@ const Hero = () => {
                     <div className="grid grid-cols-3 gap-8 mt-20 max-w-3xl mx-auto">
                         <div className="text-center">
                             <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">100+</div>
-                            <div className="text-gray-400 text-sm md:text-base">Projects Delivered</div>
+                            <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Projects Delivered</div>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">50+</div>
-                            <div className="text-gray-400 text-sm md:text-base">Happy Clients</div>
+                            <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Happy Clients</div>
                         </div>
                         <div className="text-center">
                             <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">5+</div>
-                            <div className="text-gray-400 text-sm md:text-base">Years Experience</div>
+                            <div className="text-gray-600 dark:text-gray-400 text-sm md:text-base">Years Experience</div>
                         </div>
                     </div>
                 </div>
@@ -96,7 +96,7 @@ const Hero = () => {
                     e.preventDefault();
                     document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
                 }}>
-                    <svg className="w-6 h-6 text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="w-6 h-6 text-gray-600 dark:text-gray-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                         <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </a>
