@@ -122,13 +122,16 @@ const Contact = () => {
                                     <div>
                                         <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Call Us</div>
                                         <a href="tel:+1234567890" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
-                                            +1 (234) 567-890
+                                            +91 6363045158
+                                        </a><br></br>
+                                        <a href="tel:+1234567890" className="text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+                                            +91 8328424181
                                         </a>
                                     </div>
                                 </div>
 
                                 {/* Location */}
-                                <div className="flex items-start gap-4">
+                                {/* <div className="flex items-start gap-4">
                                     <div className="glass p-3 rounded-lg">
                                         <svg className="w-6 h-6 text-pink-400" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
                                             <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
@@ -142,7 +145,7 @@ const Contact = () => {
                                             Innovation Hub, 12345
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
 
                             {/* Social Links */}

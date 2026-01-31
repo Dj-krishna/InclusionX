@@ -116,8 +116,8 @@ const Features = () => {
                                 {[
                                     { label: 'On-Time Delivery', value: '100%' },
                                     { label: 'Code Quality', value: 'A+' },
-                                    { label: 'Active Projects', value: '25+' },
-                                    { label: 'Tech Stack', value: '50+' },
+                                    { label: 'Active Projects', value: '5+' },
+                                    { label: 'Tech Stack', value: '20+' },
                                 ].map((stat, idx) => (
                                     <div key={idx} className="glass rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
                                         <div className="text-3xl font-bold gradient-text mb-2">{stat.value}</div>
