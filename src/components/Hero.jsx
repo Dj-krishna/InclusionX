@@ -91,7 +91,7 @@ const Hero = () => {
             </div>
 
             {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            {/* <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
                 <a href="#services" onClick={(e) => {
                     e.preventDefault();
                     document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
@@ -100,7 +100,7 @@ const Hero = () => {
                         <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                     </svg>
                 </a>
-            </div>
+            </div> */}
         </section>
     );
 };
