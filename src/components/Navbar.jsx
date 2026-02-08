@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import logo from '../assets/brand.png';
 
 const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -33,20 +34,22 @@ const Navbar = () => {
 
     return (
         <nav
-            className={`fixed w-full top-0 z-50 transition-all duration-300 ${isScrolled
+            className={`fixed w-full top-0 z-50 transition-all duration-300 h-20 flex items-center ${isScrolled
                 ? isDark
-                    ? 'glass py-4 shadow-lg'
-                    : 'bg-white/80 backdrop-blur-xl border border-gray-200 py-4 shadow-lg'
+                    ? 'glass shadow-lg'
+                    : 'bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-lg'
                 : isDark
-                    ? 'bg-transparent py-6'
-                    : 'bg-transparent py-6'
+                    ? 'bg-transparent'
+                    : 'bg-transparent'
                 }`}
         >
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
                     <a href="#home" className="text-2xl font-bold gradient-text flex items-center gap-2">
-                        <span className="text-3xl">✦</span>
+                        <div>
+                            <img src={logo} alt="InclusionX Logo" className="h-10 w-auto" />
+                        </div>
                         InclusionX
                     </a>
 
@@ -57,11 +60,10 @@ const Navbar = () => {
                                 key={link.name}
                                 href={link.href}
                                 onClick={(e) => scrollToSection(e, link.href)}
-                                className={`transition-colors duration-300 font-medium relative group ${
-                                    isDark
+                                className={`transition-colors duration-300 font-medium relative group ${isDark
                                         ? 'text-gray-300 hover:text-white'
                                         : 'text-gray-700 hover:text-gray-900'
-                                }`}
+                                    }`}
                             >
                                 {link.name}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-600 group-hover:w-full transition-all duration-300"></span>
@@ -80,11 +82,10 @@ const Navbar = () => {
                     <div className="flex items-center gap-4">
                         <button
                             onClick={toggleTheme}
-                            className={`p-2 rounded-full transition-colors duration-300 ${
-                                isDark
+                            className={`p-2 rounded-full transition-colors duration-300 ${isDark
                                     ? 'bg-gray-800 hover:bg-gray-700 text-yellow-400'
                                     : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
-                            }`}
+                                }`}
                             aria-label="Toggle theme"
                         >
                             {isDark ? (
@@ -105,9 +106,8 @@ const Navbar = () => {
                         {/* Mobile Menu Button */}
                         <button
                             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                            className={`md:hidden p-2 focus:outline-none transition-colors duration-300 ${
-                                isDark ? 'text-white' : 'text-gray-900'
-                            }`}
+                            className={`md:hidden p-2 focus:outline-none transition-colors duration-300 ${isDark ? 'text-white' : 'text-gray-900'
+                                }`}
                             aria-label="Toggle menu"
                         >
                             <svg
@@ -132,11 +132,10 @@ const Navbar = () => {
                 {/* Mobile Menu */}
                 {isMobileMenuOpen && (
                     <div
-                        className={`md:hidden mt-4 rounded-2xl p-6 animate-fade-in transition-colors duration-300 ${
-                            isDark
+                        className={`md:hidden mt-4 rounded-2xl p-6 animate-fade-in transition-colors duration-300 ${isDark
                                 ? 'glass'
                                 : 'bg-white/80 backdrop-blur-xl border border-gray-200'
-                        }`}
+                            }`}
                     >
                         <div className="flex flex-col gap-4">
                             {navLinks.map((link) => (
@@ -144,11 +143,10 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={(e) => scrollToSection(e, link.href)}
-                                    className={`transition-colors duration-300 font-medium py-2 ${
-                                        isDark
+                                    className={`transition-colors duration-300 font-medium py-2 ${isDark
                                             ? 'text-gray-300 hover:text-white'
                                             : 'text-gray-700 hover:text-gray-900'
-                                    }`}
+                                        }`}
                                 >
                                     {link.name}
                                 </a>
